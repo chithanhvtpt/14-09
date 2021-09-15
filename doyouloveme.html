@@ -7,16 +7,16 @@
 <body>
 <h1>Do you love me</h1>
 <button id="b1" onclick="clickme()">Yes</button>
-<button id="b2" onmouseover="click1()">No</button>
+<button id="b2" onmouseover="click1()" style="position: absolute" left="200px" top="200px">No</button>
 <script>
     function clickme(){
         alert('<3')
     }
     function click1() {
-        let x = Math.random() + window.innerWidth
-        let y = Math.random() + window.innerHeight
-        document.getElementById('b2').style.left = x;
-        document.getElementById('b2').style.top = y;
+        let left = parseInt(Math.random()*500);
+        let top = parseInt(Math.random()*500);
+        document.getElementById('b2').style.left = left + 'px'
+        document.getElementById('b2').style.top = top + 'px'
     }
 </script>
 </body>
